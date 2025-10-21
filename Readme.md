@@ -1,7 +1,7 @@
----
 
 
----
+
+
 
 <h1 id="oop.php">OOP.PHP</h1>
 <p>This document describes the implementation of a <code>Car</code> class in PHP, showing its attributes, methods, and usage examples.</p>

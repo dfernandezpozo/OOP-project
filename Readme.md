@@ -1,137 +1,158 @@
+# OOP.PHP
 
+  
 
+This document describes the implementation of a `Car` class in PHP, showing its attributes, methods, and usage examples.
 
+  
 
+---
 
-<h1 id="oop.php">OOP.PHP</h1>
-<p>This document describes the implementation of a <code>Car</code> class in PHP, showing its attributes, methods, and usage examples.</p>
-<hr>
-<h2 id="constructor-and-attributes">1. Constructor and Attributes</h2>
-<p>The <code>Car</code> class contains the basic attributes of a car and methods to interact with them.</p>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token keyword">class</span>  <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  
 
-<span class="token keyword">public</span>  <span class="token variable">$brand</span><span class="token punctuation">;</span> 
+## 1. Constructor and Attributes
 
-<span class="token keyword">public</span>  <span class="token variable">$model</span><span class="token punctuation">;</span> 
+  
 
-<span class="token keyword">public</span>  <span class="token variable">$year</span><span class="token punctuation">;</span> 
+The `Car` class contains the basic attributes of a car and methods to interact with them.
 
-<span class="token keyword">public</span>  <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="getters">2. Getters</h2>
-<pre class=" language-php"><code class="prism  language-php"><span class="token keyword">function</span>  <span class="token function">get_brand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
 
-<span class="token keyword">return</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">brand</span><span class="token punctuation">;</span>
+```php
 
-<span class="token punctuation">}</span>
+class  Car {
 
-<span class="token keyword">function</span>  <span class="token function">get_model</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+public  $brand; 
 
-<span class="token keyword">return</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">model</span><span class="token punctuation">;</span>
+public  $model; 
 
-<span class="token punctuation">}</span>
+public  $year; 
 
-<span class="token keyword">function</span>  <span class="token function">get_year</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+public  $actualSpeed; 
+}
+```
+## 2. Getters
+```php
+function  get_brand() {
 
-<span class="token keyword">return</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">year</span><span class="token punctuation">;</span>
+return  $this->brand;
 
-<span class="token punctuation">}</span>
+}
 
-<span class="token keyword">function</span>  <span class="token function">get_actualSpeed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+function  get_model() {
 
-<span class="token keyword">return</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">actualSpeed</span><span class="token punctuation">;</span>
+return  $this->model;
 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="setters">3. Setters</h2>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token keyword">function</span>  <span class="token function">set_brand</span><span class="token punctuation">(</span><span class="token variable">$brand</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+}
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">brand</span> <span class="token operator">=</span> <span class="token variable">$brand</span><span class="token punctuation">;</span>
+function  get_year() {
 
-<span class="token punctuation">}</span>
+return  $this->year;
 
-<span class="token keyword">function</span>  <span class="token function">set_model</span><span class="token punctuation">(</span><span class="token variable">$model</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+}
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">model</span> <span class="token operator">=</span> <span class="token variable">$model</span><span class="token punctuation">;</span>
+function  get_actualSpeed() {
 
-<span class="token punctuation">}</span>
+return  $this->actualSpeed;
 
-<span class="token keyword">function</span>  <span class="token function">set_year</span><span class="token punctuation">(</span><span class="token variable">$year</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+}
+``` 
+## 3. Setters
+```php
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">year</span> <span class="token operator">=</span> <span class="token variable">$year</span><span class="token punctuation">;</span>
+function  set_brand($brand) {
 
-<span class="token punctuation">}</span>
+$this->brand = $brand;
 
-<span class="token keyword">function</span>  <span class="token function">set_actualSpeed</span><span class="token punctuation">(</span><span class="token variable">$actualSpeed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+}
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">actualSpeed</span> <span class="token operator">=</span> <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span>
+function  set_model($model) {
 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="accelerate-method">4. Accelerate method</h2>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token keyword">function</span>  <span class="token function">accelerate</span><span class="token punctuation">(</span><span class="token variable">$actualSpeed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+$this->model = $model;
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">actualSpeed</span> <span class="token operator">+</span><span class="token operator">=</span> <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span>
+}
 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="deccelerate-method">5. Deccelerate method</h2>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token keyword">function</span>  <span class="token function">deccelerate</span><span class="token punctuation">(</span><span class="token variable">$actualSpeed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+function  set_year($year) {
 
-<span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">actualSpeed</span> <span class="token operator">-</span><span class="token operator">=</span> <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span>
+$this->year = $year;
 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="details-method">6. Details method</h2>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token keyword">function</span>  <span class="token function">details</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+}
 
-<span class="token keyword">return</span>  <span class="token string">"Brand: "</span>  <span class="token punctuation">.</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">brand</span>  <span class="token punctuation">.</span>  <span class="token string">"\n"</span>  <span class="token punctuation">.</span>
+function  set_actualSpeed($actualSpeed) {
 
-<span class="token string">"Model: "</span>  <span class="token punctuation">.</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">model</span>  <span class="token punctuation">.</span>  <span class="token string">"\n"</span>  <span class="token punctuation">.</span>
+$this->actualSpeed = $actualSpeed;
 
-<span class="token string">"Year: "</span>  <span class="token punctuation">.</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">year</span>  <span class="token punctuation">.</span>  <span class="token string">"\n"</span>  <span class="token punctuation">.</span>
+}
+```
+## 4. Accelerate method
+```php
 
-<span class="token string">"Actual Speed: "</span>  <span class="token punctuation">.</span>  <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">actualSpeed</span><span class="token punctuation">;</span>
+function  accelerate($actualSpeed) {
 
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="car-with-accelerate-method">Car with accelerate method</h2>
-<pre class=" language-php"><code class="prism  language-php">
-<span class="token variable">$car</span> <span class="token operator">=</span> <span class="token keyword">new</span>  <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$this->actualSpeed += $actualSpeed;
 
-<span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_brand</span><span class="token punctuation">(</span><span class="token string">"Opel"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+}
+```
+## 5. Deccelerate method
+```php
 
-<span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_model</span><span class="token punctuation">(</span><span class="token string">"Corsa"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+function  deccelerate($actualSpeed) {
 
-<span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_year</span><span class="token punctuation">(</span><span class="token string">"2017"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$this->actualSpeed -= $actualSpeed;
 
-<span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_actualSpeed</span><span class="token punctuation">(</span><span class="token number">140</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+}
+```
+## 6. Details method
+```php
 
-<span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">accelerate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="showing-car-using-details">Showing car using details()</h2>
-<pre class=" language-php"><code class="prism  language-php"><span class="token keyword">echo</span>  <span class="token variable">$car</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">details</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token string">"\n"</span><span class="token punctuation">.</span><span class="token string">"\n"</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="car2-with-deccelerate-method">Car2 with deccelerate method</h2>
-<pre class=" language-php"><code class="prism  language-php"><span class="token variable">$car2</span> <span class="token operator">=</span> <span class="token keyword">new</span>  <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+function  details() {
 
-<span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_brand</span><span class="token punctuation">(</span><span class="token string">"Nissan"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+return  "Brand: "  .  $this->brand  .  "\n"  .
 
-<span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_model</span><span class="token punctuation">(</span><span class="token string">"Sandero"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+"Model: "  .  $this->model  .  "\n"  .
 
-<span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_year</span><span class="token punctuation">(</span><span class="token string">"2000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+"Year: "  .  $this->year  .  "\n"  .
 
-<span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set_actualSpeed</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+"Actual Speed: "  .  $this->actualSpeed;
 
-<span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">deccelerate</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="showing-car2">Showing car2</h2>
-<pre class=" language-php"><code class="prism  language-php"><span class="token keyword">echo</span>  <span class="token variable">$car2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">details</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+}
+```
+## Car with accelerate method
+```php
+
+$car = new  Car();
+
+$car->set_brand("Opel");
+
+$car->set_model("Corsa");
+
+$car->set_year("2017");
+
+$car->set_actualSpeed(140);
+
+$car->accelerate(100);
+```
+## Showing car using details()
+```php
+echo  $car->details() ."\n"."\n";
+```
+## Car2 with deccelerate method
+```php
+$car2 = new  Car();
+
+$car2->set_brand("Nissan");
+
+$car2->set_model("Sandero");
+
+$car2->set_year("2000");
+
+$car2->set_actualSpeed(200);
+
+$car2->deccelerate(100);
+```
+## Showing car2
+```php
+echo  $car2->details();
+```
+
 

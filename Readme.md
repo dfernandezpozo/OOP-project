@@ -11,13 +11,13 @@
 <pre class=" language-php"><code class="prism  language-php">
 <span class="token keyword">class</span>  <span class="token class-name">Car</span> <span class="token punctuation">{</span>
 
-<span class="token keyword">public</span>  <span class="token variable">$brand</span><span class="token punctuation">;</span> 
+	<span class="token keyword">public</span>  <span class="token variable">$brand</span><span class="token punctuation">;</span> 
 
-<span class="token keyword">public</span>  <span class="token variable">$model</span><span class="token punctuation">;</span> 
+	<span class="token keyword">public</span>  <span class="token variable">$model</span><span class="token punctuation">;</span> 
 
-<span class="token keyword">public</span>  <span class="token variable">$year</span><span class="token punctuation">;</span> 
+	<span class="token keyword">public</span>  <span class="token variable">$year</span><span class="token punctuation">;</span> 
 
-<span class="token keyword">public</span>  <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span> 
+	<span class="token keyword">public</span>  <span class="token variable">$actualSpeed</span><span class="token punctuation">;</span> 
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="getters">2. Getters</h2>
